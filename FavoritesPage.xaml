@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VersionHunterX.FavoritesPage" Title="Избранное" BackgroundColor="{StaticResource Bg}">
+  <CollectionView x:Name="List" Margin="16" ItemTemplate="{StaticResource RepoTemplate}" SelectionMode="Single" SelectionChanged="OnSelected">
+    <CollectionView.EmptyView><Label Text="Пока пусто. Добавляйте проекты звёздочкой на экране версий." TextColor="{StaticResource Muted}" HorizontalTextAlignment="Center" Margin="20" /></CollectionView.EmptyView>
+  </CollectionView>
+</ContentPage>

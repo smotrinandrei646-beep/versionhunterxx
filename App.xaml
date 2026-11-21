@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VersionHunterX.App">
+  <Application.Resources>
+    <ResourceDictionary>
+      <Color x:Key="Bg">#0B0614</Color>
+      <Color x:Key="Card">#1A1030</Color>
+      <Color x:Key="Accent">#F0ABFC</Color>
+      <Color x:Key="Muted">#A99CC4</Color>
+      <LinearGradientBrush x:Key="Grad" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#7C3AED" Offset="0" />
+        <GradientStop Color="#C026D3" Offset="0.6" />
+        <GradientStop Color="#F472B6" Offset="1" />
+      </LinearGradientBrush>
+      <Style x:Key="GradBtn" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource Grad}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="CornerRadius" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+      </Style>
+      <DataTemplate x:Key="RepoTemplate">
+        <Border Margin="0,6" Padding="16" BackgroundColor="{StaticResource Card}" Stroke="#3B2166" StrokeThickness="1" StrokeShape="RoundRectangle 18">
+          <VerticalStackLayout Spacing="4">
+            <Label Text="{Binding Name}" TextColor="White" FontSize="17" FontAttributes="Bold" />
+            <Label Text="{Binding Description}" TextColor="{StaticResource Muted}" FontSize="13" MaxLines="2" LineBreakMode="TailTruncation" />
+            <Label Text="{Binding Subtitle}" TextColor="{StaticResource Accent}" FontSize="12" />
+          </VerticalStackLayout>
+        </Border>
+      </DataTemplate>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

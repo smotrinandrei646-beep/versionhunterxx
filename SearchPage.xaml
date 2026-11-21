@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VersionHunterX.SearchPage" Title="VersionHunterX" BackgroundColor="{StaticResource Bg}">
+  <Grid RowDefinitions="Auto,Auto,Auto,Auto,*" Padding="16" RowSpacing="12">
+    <Border Padding="20" Background="{StaticResource Grad}" StrokeShape="RoundRectangle 24" StrokeThickness="0">
+      <VerticalStackLayout>
+        <Label Text="Найди любую версию" TextColor="White" FontSize="26" FontAttributes="Bold" />
+        <Label Text="GitHub · GitLab · Codeberg — актуальные и старые релизы" TextColor="#FFFFFFCC" FontSize="13" />
+      </VerticalStackLayout>
+    </Border>
+    <Border Grid.Row="1" BackgroundColor="{StaticResource Card}" StrokeShape="RoundRectangle 16" Stroke="#3B2166">
+      <SearchBar x:Name="Bar" Placeholder="Название приложения, игры, программы…" TextColor="White" PlaceholderColor="#8B7FA8" SearchButtonPressed="OnSearch" />
+    </Border>
+    <HorizontalStackLayout Grid.Row="2" Spacing="6">
+      <CheckBox x:Name="Gh" IsChecked="True" Color="#F472B6" /><Label Text="GitHub" TextColor="White" VerticalOptions="Center" />
+      <CheckBox x:Name="Gl" IsChecked="True" Color="#F472B6" /><Label Text="GitLab" TextColor="White" VerticalOptions="Center" />
+      <CheckBox x:Name="Cb" IsChecked="True" Color="#F472B6" /><Label Text="Codeberg" TextColor="White" VerticalOptions="Center" />
+    </HorizontalStackLayout>
+    <HorizontalStackLayout Grid.Row="3" Spacing="10">
+      <ActivityIndicator x:Name="Busy" Color="#F472B6" />
+      <Label x:Name="Status" TextColor="{StaticResource Muted}" VerticalOptions="Center" />
+    </HorizontalStackLayout>
+    <CollectionView x:Name="List" Grid.Row="4" ItemTemplate="{StaticResource RepoTemplate}" SelectionMode="Single" SelectionChanged="OnSelected" />
+  </Grid>
+</ContentPage>

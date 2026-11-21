@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VersionHunterX.VerifyPage" Title="Проверка SHA-256" BackgroundColor="{StaticResource Bg}">
+  <ScrollView>
+    <VerticalStackLayout Padding="16" Spacing="14">
+      <Label Text="Проверьте целостность файла перед установкой" TextColor="White" FontSize="18" FontAttributes="Bold" />
+      <Button Text="Выбрать файл" Style="{StaticResource GradBtn}" HeightRequest="48" Clicked="OnPick" />
+      <Label x:Name="FileLbl" TextColor="{StaticResource Accent}" />
+      <Label x:Name="Out" TextColor="White" FontFamily="monospace" FontSize="12" />
+      <Border BackgroundColor="{StaticResource Card}" Stroke="#3B2166" StrokeShape="RoundRectangle 14" Padding="8,0">
+        <Entry x:Name="Expected" Placeholder="Ожидаемый SHA-256 (вставьте для сравнения)" TextColor="White" PlaceholderColor="#8B7FA8" TextChanged="OnCompare" />
+      </Border>
+      <Label x:Name="Res" FontSize="16" FontAttributes="Bold" />
+    </VerticalStackLayout>
+  </ScrollView>
+</ContentPage>

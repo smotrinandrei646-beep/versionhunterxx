@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:VersionHunterX"
+       x:Class="VersionHunterX.AppShell"
+       BackgroundColor="#140B24" ForegroundColor="White" TitleColor="White"
+       Shell.TabBarBackgroundColor="#140B24" Shell.TabBarTitleColor="#F0ABFC"
+       Shell.TabBarUnselectedColor="#8B7FA8" Shell.TabBarForegroundColor="#F0ABFC">
+  <TabBar>
+    <ShellContent Title="🔍 Поиск" Route="search" ContentTemplate="{DataTemplate local:SearchPage}" />
+    <ShellContent Title="★ Избранное" Route="fav" ContentTemplate="{DataTemplate local:FavoritesPage}" />
+    <ShellContent Title="⬇ Загрузки" Route="dl" ContentTemplate="{DataTemplate local:DownloadsPage}" />
+    <ShellContent Title="🕘 История" Route="hist" ContentTemplate="{DataTemplate local:HistoryPage}" />
+    <ShellContent Title="🔐 SHA-256" Route="sha" ContentTemplate="{DataTemplate local:VerifyPage}" />
+  </TabBar>
+</Shell>
