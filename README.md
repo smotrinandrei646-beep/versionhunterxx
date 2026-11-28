@@ -1,11 +1,1 @@
-# VersionHunterX
-Поиск приложений и версий на GitHub / GitLab / Codeberg, загрузки с SHA-256, избранное, история.
-
-## Получить APK (без установки чего-либо на ПК)
-1. Создайте репозиторий на GitHub и загрузите эту папку (ветка `main`).
-2. Вкладка **Actions → Build APK** (запускается сам; или Run workflow).
-3. Через ~10 минут скачайте артефакт **VersionHunterX-apk** → внутри `.apk`.
-
-## Локально
-`dotnet workload install maui-android` и
-`dotnet publish -f net8.0-android -c Release -p:AndroidPackageFormat=apk`
+<img width="1672" height="941" alt="1000001636" src="https://github.com/user-attachments/assets/606e69f4-8669-494b-83dd-9ce84974c9e3" />
